@@ -1,0 +1,143 @@
+@font-face {
+    font-family: Mario;
+    src: url(SuperMario256.ttf);
+}
+*{
+    margin: 0px;
+    font-family: 'Mario';
+    -webkit-text-stroke: 1px white;
+}
+
+body{
+    background-image: url(castle.jpg);
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#titre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+}
+
+#titre p{
+    font-size: 4rem;
+    letter-spacing: 10px;
+}
+
+#count{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#ensemble{
+    width: 50vw;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    justify-content: center;
+    gap: 10px;
+    align-content: flex-start;
+    
+}
+
+.carte{
+    width: 5vw;
+    height: 5vw;
+    max-width: 90px;
+    max-height: 90px;
+    background-image: url(Question_Block_NSMB.webp);
+    background-size: contain;
+    border-radius: 10px;
+    transform: scale(1);
+    transition:ease 0.5s;
+}
+
+.carte:hover{
+    transition:ease 0.5s;
+    transform: scale(1.1);
+}
+
+.carte_intru{
+    /*animation: animation 0.5s;*/
+    animation-fill-mode: forwards;
+    transform: rotateY(180deg);
+    width: 5vw;
+    height: 5vw;
+    max-width: 90px;
+    max-height: 90px;
+    border-radius: 10px;    
+    background-image: url(ghost.png);
+    background-size: cover;
+}
+
+.carte_base{
+    /*animation: animation 0.5s;*/
+    animation-fill-mode:forwards;
+    transform: rotateY(180deg);
+    width: 5vw;
+    height: 5vw;
+    max-width: 90px;
+    max-height: 90px;
+    border-radius: 10px;  
+    background-image: url(mario_head.png);
+    background-size: cover;
+    pointer-events: none;
+}
+
+#overlay{
+    transition: ease-in 0.5s;
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#overlay div{
+    width: auto;
+    font-size: 5rem;
+    transition: ease 0.3s;
+}
+
+#score{
+    text-align: center;
+    transition: ease 0.5s;
+}
+
+#btn{
+    width: fit-content;
+    height: fit-content;
+    background-color: yellow;
+    font-size: 2rem;
+    border-radius:15px ;
+    padding: 10px;
+    cursor: pointer;
+    transition: ease 0.2s;
+}
+
+#btn:hover{
+    scale: 1.1;
+}
+
+@keyframes animation {
+    from{
+        transform: rotateY(0deg);
+    } to {
+        transform: rotateY(180deg);
+    }
+}
