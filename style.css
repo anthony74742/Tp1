@@ -43,14 +43,14 @@ body{
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     align-content: flex-start;
     
 }
 
 .carte{
-    width: 5vw;
-    height: 5vw;
+    width: 4vw;
+    height: 4vw;
     max-width: 90px;
     max-height: 90px;
     background-image: url(Question_Block_NSMB.webp);
@@ -69,8 +69,8 @@ body{
     /*animation: animation 0.5s;*/
     animation-fill-mode: forwards;
     transform: rotateY(180deg);
-    width: 5vw;
-    height: 5vw;
+    width: 4vw;
+    height: 4vw;
     max-width: 90px;
     max-height: 90px;
     border-radius: 10px;    
@@ -82,8 +82,8 @@ body{
     /*animation: animation 0.5s;*/
     animation-fill-mode:forwards;
     transform: rotateY(180deg);
-    width: 5vw;
-    height: 5vw;
+    width: 4vw;
+    height: 4vw;
     max-width: 90px;
     max-height: 90px;
     border-radius: 10px;  
